@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/f5aa5fb745.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js"></script>
+</head>
+
+<body onload="constructor_shop()">
+    <div class="preloader" id="preloader"></div>
+    <div id="main-content">
+        <div class="home">
+            <nav class="container">
+                <img src="./asset/logo-removed.png" alt="logo" class="logo">
+                <ol class="nav-list">
+                    <li class="nav-items"><a href="#" style="text-decoration: none;">Home</a></li>
+                    <li class="nav-items"><a href="#" style="text-decoration: none;">Blog</a></li>
+                    <li class="nav-items"><a href="#shop" style="text-decoration: none;">Shop</a></li>
+                    <li class="nav-items"><a href="#" style="text-decoration: none;">Vendors</a></li>
+    
+                </ol>
+            </nav>
+            <div class="socials-container">
+                <p class="social-text">GET NEWS ON SOCIALS</p>
+                <ul class="socials-list">
+                    <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-twitter-square" aria-hidden="true"></i></li>
+                </ul>
+            </div>
+            <div class="main-text-container">
+                <div class="sub-heading-text">
+                    HYPER<br>
+                    COLLECTION 2020
+                </div>
+                <p class="heading-text no-bold">EFFORTLESSLY</p>
+                <p class="heading-text">AFFORDABLE</p>
+                <button class="call-btn" onclick="changeView('shop')">Go Shopping</button>
+            </div>
+        </div>
+        <div class="promotion">
+            <div class="promotion-container">
+                <i class="fa fa-truck promotion-icon" aria-hidden="true"></i>
+                <div class="promotion-text">
+                    <h4 class="promotion-text-heading">Free Shipping</h4>
+                    <p class="promotion-text-subheading">Capped at $39 per order</p>
+                </div>
+    
+            </div>
+            <div class="promotion-container">
+                <i class="fa fa-shield promotion-icon" aria-hidden="true"></i>
+                <div class="promotion-text">
+                    <h4 class="promotion-text-heading">Secure Payments</h4>
+                    <p class="promotion-text-subheading">Up to 12 month installments</p>
+                </div>
+    
+            </div>
+            <div class="promotion-container">
+                <i class="fa fa-exchange promotion-icon" aria-hidden="true"></i>
+                <div class="promotion-text">
+                    <h4 class="promotion-text-heading">14 Days Return</h4>
+                    <p class="promotion-text-subheading">Shop with confidence</p>
+                </div>
+    
+            </div>
+        </div>
+        <div class="category">
+            <div class="category1">
+                <p class="category-text">
+                    Get Ladies Coat Wear<br>Free Shipping over $120<br><a href="https://www.google.com">shop now</a>
+                </p>
+    
+            </div>
+            <div class="category2">
+                <p class="category2-text">
+                    Campus Style <br>Casual Wear<br>Get Flat 20% off<br><a href="https://www.google.com">shop now</a>
+                </p>
+            </div>
+            <div class="category3">
+                <p class="category3-text">
+                    Get Best Garments<br>Get Flat 20% off<br><a href="https://www.google.com">shop now</a>
+                </p>
+            </div>
+    
+        </div>
+        <div class="products-menu">
+            <ol class="product-list-category">
+                <li class="products-category active" onclick="applyFilter('default')">LATEST TRENDS</li>
+                <li class="products-category" onclick="applyFilter('rating')">TOP RATED</li>
+                <li class="products-category" onclick="applyFilter('price')">BEST SELLERS</li>
+            </ol>
+        </div>
+        <div class="shop" id="shop" >
+            <!-- code will be injected using javascript -->
+        </div>
+        <div class="pagination" id="pagination">
+            
+        </div>
+        <div class="cart">
+            <div class="cart-btn">
+                <button class="call-btn" id="cart-btn-show" onclick="toggleCart()">Show Cart</button>
+            </div>
+            <div class="cart-page" id="cart-page">
+                <div class="cart-header">
+                    <h1>Shopping Cart</h1>
+                    <h1 id="cart-items">Items</h1>
+                    
+                </div>
+                <div>
+                        <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th colspan="1" class="table-head products-header">PRODUCTS DETAILS</th>
+                                <th colspan="1" class="table-head products-header">QUANTITY</th>
+                                <th colspan="1" class="table-head products-header">PRICE</th>
+                                <th colspan="1" class="table-head products-header">TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-show">
+                            
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                              <td class="total" colspan="4">
+                                  <div class="checkout">
+                                      <button class="call-btn no-margin" onclick="changeView('shop')">Checkout</button> 
+                                      <h3 id="total">Total : 0</h3>
+                                  </div>
+                                  
+                              </td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                </div>
+                    
+               </div>
+            </div>
+        </div>
+        
+    
+    
+    
+    
+    
+        <div class="footer">
+            
+            <div class="footer-newsletter">
+                <div class="footer-container">
+                    <i class="fa fa-envelope email" aria-hidden="true"></i>
+                    <p>SIGN UP<br>FOR OUR NEWSLETTER</p>
+                </div>
+                <div class="footer-container">Subscribe to our news letter to get regular <br>fashion updates and news</div>
+                <div class="footer-container">
+                    <input placeholder="Enter your email" type="email" class="input-newsletter">
+                    <button class="call-btn">Subsribe</button>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <p class="footer-info">STORE LOCATION</p>
+                <p class="footer-info">OPENING HOURS</p>
+                <p class="footer-info">PRIVACY POLICY</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
